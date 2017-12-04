@@ -1,20 +1,23 @@
 //expression.h
+//XiHao Wu and Christopher Lianides
+//Perm number: 4338109 and 8899338
 #ifndef EXPRESSION_H
 #define EXPRESSION_H
-#include <string>
-#include <cstdlib>
-#include <iostream>
+#include "list.h"
 
 
 class expression {
 
 public:
-    expression(Node *Head);
-	string infixstring();
-	string prefixstring();
-	string postfixstring();
+	expression(string input);
+	string infixstring() const;
+	string prefixstring() const;
+	string postfixstring() const;	
+
 private:
-    Node *Head;
+	list* exp;
+	
+
 };
 
 #endif
