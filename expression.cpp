@@ -21,3 +21,10 @@ string expression::prefixstring() const {
 string expression::postfixstring() const {
     return exp->print_postfix_list();
 }
+int evaluate(string infix) const{
+    int evaluation = 0;
+    return evaluation;
+}	
+string compare(string infix1, string infix2) const {
+    
+}
