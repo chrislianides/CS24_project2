@@ -1,22 +1,23 @@
 //expression.cpp
+//XiHao Wu and Christopher Lianides
+//Perm number: 4338109 and 8899338
 #include "expression.h"
-#include "Node.h"
-#include <iostream>
-using namespace std;
 
-expression::expression(Node *Head){
-    this->Head=Head=NULL;
+expression::expression(string inputlist) {
+	exp = new list(inputlist);
+	exp->create_list();
+	
+} 
+
+string expression::infixstring() const {
+    return exp->print_infix_list();
+
 }
 
-expression::infixstring(){
-    return Head->print_infix();
+string expression::prefixstring() const {
+    return exp->print_prefix_list();
 }
 
-expression::prefixstring(){
-    return Head->print_prefix();
+string expression::postfixstring() const {
+    return exp->print_postfix_list();
 }
-
-expression::postfixstring(){
-    return Head->print_postfix();
-}
-
