@@ -12,7 +12,10 @@ public:
 	expression(string input);
 	string infixstring() const;
 	string prefixstring() const;
-	string postfixstring() const;	
+	string postfixstring() const;
+	int evaluate() const;
+	string compare() const;
+	
 
 private:
 	list* exp;
