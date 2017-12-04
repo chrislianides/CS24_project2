@@ -13,8 +13,8 @@ public:
 	string infixstring() const;
 	string prefixstring() const;
 	string postfixstring() const;
-	int evaluate(string input) const;
-	string compare(string input, string input2) const;
+	int evaluate(string infix) const;
+	string compare(string infix1, string infix2) const;
 	
 
 private:
