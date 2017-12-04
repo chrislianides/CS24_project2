@@ -1,22 +1,24 @@
 //string.cpp
 //XiHao Wu and Christopher Lianides
-//Perm Number: 4338109 and 8899338
+//Perm number: 4338109 and 8899338
 #include "string.h"
 
 
 int main() {
 
+	cout<<"Please enter a fully parenthesized expression with each character separated by empty spaces"<<endl;
 
-	
-	cout<<"Please enter the fully parenthesized expression with empty spaces"<<endl;
-	string str;
-	getline(cin, str);
-	
-	expression ex(str);
+	string s;
 
-    print_infix(ex);
-    print_prefix(ex);
-    print_postfix(ex);
+	getline(cin, s);
+
+	cout<<"--------------------------------"<<endl;
+
+	expression exp(s);
+
+    print_infix(exp);
+    print_prefix(exp);
+    print_postfix(exp);
 
 	return 0;
 }
@@ -35,4 +37,3 @@ void print_postfix(const expression & myexp) {
     cout<<"The postfix of the expression is: "<<endl;
     cout<<myexp.postfixstring()<<endl;
 }
-
