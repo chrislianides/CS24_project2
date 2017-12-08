@@ -6,21 +6,24 @@
 #include "list.h"
 
 
+
 class expression {
 
 public:
 	expression(string input);
-	string infixstring() const;
-	string prefixstring() const;
-	string postfixstring() const;
-	int evaluate(string infix) const;
-	string compare(string infix1, string infix2) const;
-	
+	string infixstring() ;
+	string prefixstring() ;
+	string postfixstring() ;
+	int evaluate();
+	void compare(string input1, string input2);
 
 private:
 	list* exp;
+	int result;
+	string infix;
 	
 
 };
+
 
 #endif

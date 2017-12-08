@@ -6,9 +6,9 @@
 #include "expression.h"
 
 
-void print_infix(const expression & myexp);
-void print_postfix(const expression & myexp); 
-void print_prefix(const expression & myexp); 
+void print_infix(expression & myexp);
+void print_postfix(expression & myexp); 
+void print_prefix(expression & myexp); 
 
 
 #endif

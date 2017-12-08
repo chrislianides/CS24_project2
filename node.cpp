@@ -46,11 +46,13 @@ string Node::print_infix() const{
 	} else if (node_t == INTEGER) {
 		return int_to_string();
 	} else {
-		str += "(";
+		str += "( ";
 		str += operand1->print_infix();
+		str += " ";
 		str += print_operator(); 
+		str += " ";
 		str += operand2->print_infix();
-		str += ")";
+		str += " )";
 	}
 return str;
 }
@@ -59,12 +61,13 @@ string Node::print_prefix() const{
 	string str = "";
 
 	if (node_t == VARIABLE) {
-		return "x";
+		return "x ";
 	} else if (node_t == INTEGER) {
 	
-		return int_to_string();
+		return int_to_string() + " ";
 	} else {
 		str += print_operator();
+		str += " ";
 		str += operand1->print_prefix();
 		str += operand2->print_prefix();
 	}
@@ -76,13 +79,14 @@ string Node::print_postfix() const{
 	string str = "";
 
 	if (node_t == VARIABLE) {
-		return "x";
+		return "x ";
 	} else if (node_t == INTEGER) {
-		return int_to_string();
+		return int_to_string() + " ";
 	} else {
 		str += operand1->print_postfix();
 		str += operand2->print_postfix();
 		str += print_operator();
+		str += " ";
 	}
 return str;
 
@@ -104,3 +108,4 @@ char Node::print_operator() const {
 	else if (data.op == DIVIDE) {return '/';}
 	else return 'x';
 }
+
